@@ -1,4 +1,7 @@
-/** AtBus server entrypoint for route registration and request handling. */
+/**
+ * AtBus server entrypoint for route registration and request handling.
+ * @module
+ */
 import { ATBUS_PROTOCOL_VERSION, AtBusErrorCode } from "./errors.ts";
 import type {
   AtBusEndpoint,

@@ -1,4 +1,7 @@
-/** AtBus client entrypoint for request/response RPC over a message endpoint. */
+/**
+ * AtBus client entrypoint for request/response RPC over a message endpoint.
+ * @module
+ */
 import { ATBUS_PROTOCOL_VERSION, AtBusErrorCode } from "./errors.ts";
 import type {
   AtBusCallOptions,
