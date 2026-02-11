@@ -1,5 +1,6 @@
 import type { AtBusJson } from "../types/index.ts";
 
+/** Returns true when a value is recursively JSON-serializable. */
 export const isJson = (value: unknown): value is AtBusJson => {
   if (
     value === null || typeof value === "string" || typeof value === "number" ||

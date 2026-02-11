@@ -1,3 +1,4 @@
+/** Re-exported public type surface for the AtBus package. */
 export type { AtBusPrimitive } from "./primitive.ts";
 export type { AtBusJson } from "./json.ts";
 export type { AtBusCallOptions } from "./call-options.ts";

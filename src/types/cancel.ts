@@ -1,3 +1,4 @@
+/** Cancellation envelope used to abort in-flight request handling. */
 export type AtBusCancel = {
   v: number;
   type: "atbus:cancel";

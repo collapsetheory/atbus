@@ -1,3 +1,4 @@
+/** AtBus client entrypoint for request/response RPC over a message endpoint. */
 import { ATBUS_PROTOCOL_VERSION, AtBusErrorCode } from "./errors.ts";
 import type {
   AtBusCallOptions,
@@ -18,6 +19,7 @@ type PendingRequest = {
   timer: number;
 };
 
+/** Sends typed requests and resolves responses from an AtBus server. */
 export class AtBusClient {
   #endpoint: AtBusEndpoint;
   #pending = new Map<string, PendingRequest>();
@@ -244,6 +246,7 @@ export class AtBusClient {
   }
 }
 
+/** Error object representing a remote or transport-level AtBus failure. */
 export class AtBusRemoteError extends Error {
   readonly code: string;
   readonly route?: string;

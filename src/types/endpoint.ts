@@ -1,3 +1,4 @@
+/** Message transport contract required by AtBus client and server. */
 export type AtBusEndpoint = {
   postMessage: (message: unknown) => void;
   close: () => void;

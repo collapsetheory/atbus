@@ -1,3 +1,4 @@
+/** Matches a route pattern and returns extracted path params when available. */
 export const matchRoute = (
   route: string | RegExp,
   url: string,

@@ -1,3 +1,4 @@
+/** AtBus server entrypoint for route registration and request handling. */
 import { ATBUS_PROTOCOL_VERSION, AtBusErrorCode } from "./errors.ts";
 import type {
   AtBusEndpoint,
@@ -19,6 +20,7 @@ type RouteDef = {
   handler: AtBusHandler<unknown, unknown>;
 };
 
+/** Registers route handlers and dispatches request/response envelopes. */
 export class AtBusServer {
   #endpoint: AtBusEndpoint;
   #routes: RouteDef[] = [];

@@ -1,3 +1,4 @@
+/** Public package entrypoint for AtBus request/response APIs and shared types. */
 export { ATBUS_PROTOCOL_VERSION, AtBusErrorCode } from "./errors.ts";
 export { AtBusServer } from "./server.ts";
 export { AtBusClient, AtBusRemoteError } from "./client.ts";

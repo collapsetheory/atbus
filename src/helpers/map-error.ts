@@ -2,6 +2,7 @@ import { AtBusErrorCode } from "../errors.ts";
 import type { AtBusFailure } from "../types/index.ts";
 import { isJson } from "./is-json.ts";
 
+/** Normalizes unknown error code input into a supported AtBus code. */
 export const normalizeErrorCode = (
   value: unknown,
 ): AtBusFailure["error"]["code"] => {
@@ -17,6 +18,7 @@ export const normalizeErrorCode = (
   return AtBusErrorCode.InternalError;
 };
 
+/** Converts unknown thrown values into a structured AtBus failure payload. */
 export const mapError = (
   error: unknown,
   route: string,

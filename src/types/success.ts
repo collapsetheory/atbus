@@ -1,5 +1,6 @@
 import type { AtBusJson } from "./json.ts";
 
+/** Successful response envelope carrying handler output data. */
 export type AtBusSuccess<T = AtBusJson> = {
   v: number;
   type: "atbus:response";

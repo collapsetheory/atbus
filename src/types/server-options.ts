@@ -1,3 +1,4 @@
+/** Server configuration for routing policy and transport behavior. */
 export type AtBusServerOptions = {
   autoStart?: boolean;
   maxPayloadBytes?: number;

@@ -1,5 +1,7 @@
+/** Wire protocol version used by AtBus envelopes. */
 export const ATBUS_PROTOCOL_VERSION = 1;
 
+/** Canonical AtBus error codes used by clients and servers. */
 export const AtBusErrorCode = {
   RouteNotFound: "ROUTE_NOT_FOUND",
   Timeout: "TIMEOUT",
@@ -12,4 +14,5 @@ export const AtBusErrorCode = {
   TransportError: "TRANSPORT_ERROR",
 } as const;
 
+/** Union of all possible values from {@link AtBusErrorCode}. */
 export type AtBusErrorCode = (typeof AtBusErrorCode)[keyof typeof AtBusErrorCode];

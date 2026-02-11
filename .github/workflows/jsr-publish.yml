@@ -1,0 +1,26 @@
+name: Publish JSR
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Deno
+        uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+      - name: Publish to JSR
+        run: deno publish
+        env:
+          JSR_TOKEN: ${{ secrets.JSR_TOKEN }}

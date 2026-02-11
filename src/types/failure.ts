@@ -1,6 +1,7 @@
 import type { AtBusErrorCode } from "../errors.ts";
 import type { AtBusJson } from "./json.ts";
 
+/** Failed response envelope including a structured error payload. */
 export type AtBusFailure = {
   v: number;
   type: "atbus:response";

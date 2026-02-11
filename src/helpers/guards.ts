@@ -1,6 +1,7 @@
 import { ATBUS_PROTOCOL_VERSION } from "../errors.ts";
 import type { AtBusCancel, AtBusFailure, AtBusRequest, AtBusResponse } from "../types/index.ts";
 
+/** Runtime type guard for AtBus failure responses. */
 export const isAtBusFailure = (value: unknown): value is AtBusFailure => {
   if (!value || typeof value !== "object") return false;
   const record = value as Record<string, unknown>;
@@ -17,6 +18,7 @@ export const isAtBusFailure = (value: unknown): value is AtBusFailure => {
     typeof error.message === "string";
 };
 
+/** Runtime type guard for AtBus success/failure responses. */
 export const isAtBusResponse = (value: unknown): value is AtBusResponse<unknown> => {
   if (!value || typeof value !== "object") return false;
   const record = value as Record<string, unknown>;
@@ -39,6 +41,7 @@ export const isAtBusResponse = (value: unknown): value is AtBusResponse<unknown>
   return isAtBusFailure(value);
 };
 
+/** Runtime type guard for AtBus request envelopes. */
 export const isAtBusRequest = (value: unknown): value is AtBusRequest<unknown> => {
   if (!value || typeof value !== "object") return false;
   const record = value as Record<string, unknown>;
@@ -51,6 +54,7 @@ export const isAtBusRequest = (value: unknown): value is AtBusRequest<unknown> =
     (typeof record.bus === "string" || typeof record.bus === "undefined");
 };
 
+/** Runtime type guard for AtBus cancel envelopes. */
 export const isAtBusCancel = (value: unknown): value is AtBusCancel => {
   if (!value || typeof value !== "object") return false;
   const record = value as Record<string, unknown>;
