@@ -2,7 +2,7 @@
 
 A typed **request/response message bus** for `MessagePort` and `BroadcastChannel` in TypeScript. AtBus enables route-based RPC patterns with full support for timeouts, cancellation, and structured error handling.
 
-> **Related:** See [PushBus](../pushbus) for a **publish/subscribe** alternative when you need simple fire-and-forget event distribution.
+> **Related:** See [PushBus](https://jsr.io/@collapse-theory/pushbus) for a **publish/subscribe** alternative when you need simple fire-and-forget event distribution.
 
 ## Quick Overview
 
