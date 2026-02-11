@@ -1,0 +1,16 @@
+{
+  "name": "@collapse-theory/atbus",
+  "version": "0.1.0",
+  "license": "MIT",
+  "exports": {
+    ".": "./src/index.ts",
+    "./client": "./src/client.ts",
+    "./server": "./src/server.ts"
+  },
+  "tasks": {
+    "check": "deno check src/index.ts",
+    "test": "deno test tests",
+    "fmt": "deno fmt",
+    "lint": "deno lint"
+  }
+}
