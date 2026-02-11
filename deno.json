@@ -1,7 +1,7 @@
 {
   "name": "@collapse-theory/atbus",
   "description": "Express / koa for workers and service workers. A MessagePort request/response bus with route handlers.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
   "exports": {
     ".": "./src/index.ts",
